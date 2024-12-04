@@ -3,13 +3,13 @@
 ## This is an assignment for 'JustIT' within their technical training for Python
 - Please see 'Project Brief.pdf' for full project details that this script must meet 
 - Overview
-- [X] 1. Welcome message 
-- [X] 2. Display questions 
-- [X] 3. User input
-- [X] 4. Calculate score 
-- [X] 5. Display results
-- [X] 6. Data validation 
-- [X] 7. Thank you message
+- [x] 1. Welcome message 
+- [x] 2. Display questions 
+- [x] 3. User input
+- [x] 4. Calculate score 
+- [x] 5. Display results
+- [x] 6. Data validation 
+- [x] 7. Thank you message
 
 ## Index
 1. Overview and Error Handling
