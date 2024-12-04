@@ -4,14 +4,14 @@ import json
 
 # User Variables 
 quiz_dir = 'quizzes/'
-taken_quizzes = []
-available_quizzes = []
 
 # System Variables
 selected_pathname = ''
 selected_name = '' 
 selected_json = {}
 user_name = ''
+taken_quizzes = []
+available_quizzes = []
 
 quiz_files = glob.glob( quiz_dir + '*.json')
 
@@ -22,58 +22,98 @@ def initialise():
   print("Hello and welcome to quizzes")
   print("")
   print('To begin, please enter your name:')
-  while not checking and len(user_name) > 0:
-    user_name = query_user()
+  print("")
+  while not checking:
+    user_name = get_username()
     checking = True
+  
+def get_username() :
+  acceptable_username = False
+  global user_name
+  while not acceptable_username and not user_name:
+    username = user_name
+    try:
+      print("What is your username ")
+      username = input(">>> ")
+
+      try:
+        if isinstance( int(username), int):
+          print("")
+          raise ValueError
+      except ValueError:
+          exit
+
+      if not username:
+        print("")
+        print("This is an empty string. please re-enter your name again")
+        print("")
+        exit
+      elif isinstance( username, str): 
+        if len( username) > 1:
+          try:
+            if username:
+              print( )
+              acceptable_username = True
+              user_name = username
+              print("Great, lets set your username to", username)
+            elif int(username) <=0 or int(username) >= 0:
+              print("")
+              print("Please do not enter an integer")
+              raise ValueError
+                      
+          except ValueError:
+            print(username)
+            if username != '':
+              acceptable_username = True
+              user_name = username
+              exit
+        elif isinstance( int(username), int ):                
+          print("")
+          print("This is a number, please re-enter your name again")
+          exit
+    except Exception:
+        if username != '':
+          print("There has been an error, please try again")
+        else:
+          acceptable_username = True
+          user_name = username
   print("") 
   print(f"Hello and welcome {user_name}")
   print("")
-  print("Lets test your knowledge with our quizzes!!!")
   print("")
-  load()
-
-def query_user():
-  try:
-    new_user_name = input('>>> ' )
-    if new_user_name:
-      raise ValueError
-    else:
-      raise Exception
-    print()
-    print()
-  except Exception:
-    try:
-      query_user_detailed_exceptions( new_user_name, 'string' )
-    except:
-      query_user_detailed_exceptions( new_user_name, type(int()) )
-    print('Invalid input. Please enter your name.')
-    return query_user()
-  return True
-
-def query_user_detailed_exceptions( checking_user_name, data_type = 'int' ):
-  repeated = False
-  checking_user_name = int(checking_user_name)
-  while not repeated:
-
-    print()
-    if int(checking_user_name) >= 0 or int(checking_user_name) <= 0:
-      print('Please not a number. Please enter your name.')
-    elif data_type =='string':
-      if len(checking_user_name) == 0:
-        print("Not an empty string. Please enter your name")
-      else:
-        print('Please not a string. Please enter your name.')
-    elif data_type == 'list':
-      print('Please not a list. Please enter your name.')
-    new_user_name = input('>>> ' )
-    if len(new_user_name) < 1 or new_user_name == '':
-      repeated = False
-  print('Invalid input. Please enter your name.')
-  return True
+  load_rules()
+ 
+def load_rules():
+  accepted_rules = False
+  print("")
+  print("Lets get some basic and boring information out of the way:")
+  print("")
+  print("Rules:")
+  print("")
+  print("-> Selecting a quiz")
+  print("Each quiz quiz have a a number next to the name")
+  print("Type the number to select the quiz")
+  print("")
+  print("-> Answering questions")
+  print("Each question will have 4 answers: 'A', 'B', 'C' and 'D'")
+  print("After each question, you will be asked to select the correct answer. (A, B, C or D)")
+  print("Or, you can skip a question using 'S'")
+  print("")
+  print("Scores are calculated and shown at the end of the quiz and on the main menu")
+  print("")
+  print("Lets test your knowledge with our quizzes!!!")
+  print("Good luck!")
+  print("")
+  while not accepted_rules:
+    print("Input any key to continue")
+    accepted = input(">>> ")
+    if accepted!= '':
+      accepted_rules = True
+      print("")
+      load()
 # Basic Menu
 def load():
   global available_quizzes
-
   indexQuiz = 1
 
   # If previous quizzes taken, show results
@@ -142,6 +182,8 @@ def create_quiz ( data, name ):
   global user_name
   total_questions = len( data )
   correct_answers = 0
+
+  print(user_name)
 
   for key, value in data.items():
     if key != 'name' and key != 'description':
