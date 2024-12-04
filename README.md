@@ -43,7 +43,6 @@
 - The quiz name is shown 
 - The quiz description is how 
 - Questions are read from the JSON file and are returned one-by-one once the user has selected a valid input (A,B,C,D or S)
-  -
   - Within the JSON, each question will have a key called 'answer' which indicates to the Python script which question option is correct.
     - THE QUESTION OPTION SELECTORS NEEDS TO BE A CAPITAL!!!
 - At the end of the quiz
