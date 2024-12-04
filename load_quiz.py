@@ -111,6 +111,7 @@ def load_rules():
       accepted_rules = True
       print("")
       load()
+
 # Basic Menu
 def load():
   global available_quizzes
@@ -151,11 +152,11 @@ def select_quiz ( ):
     selected_quiz = input('>>> ')
     try:
       chosen = int(selected_quiz)
-      if chosen not in range( 0, len(available_quizzes) ):
+      if chosen not in range( 1, len(available_quizzes) + 1):
         print('Invalid input. Please enter a number between 1 and', len(available_quizzes))
         continue
       else:
-        set_quiz( chosen )
+        set_quiz( chosen  )
       correct_input = False
     except ValueError:
       print('Invalid input. Please enter a number between 1 and', len(available_quizzes)) 
@@ -174,6 +175,10 @@ def set_quiz ( selector ):
           print("")
           print(f"Okay you have selected {value}")
           print("")
+        elif key == 'description':
+          print(f"Description: ")
+          print("    ", value)
+          print("")
   create_quiz( selected_json, selected_name )
     
 # Create quiz from JSON file
@@ -182,8 +187,6 @@ def create_quiz ( data, name ):
   global user_name
   total_questions = len( data )
   correct_answers = 0
-
-  print(user_name)
 
   for key, value in data.items():
     if key != 'name' and key != 'description':
@@ -224,8 +227,9 @@ def create_quiz ( data, name ):
         else:        
           correct_answers += 1
           print("")
-          print(f"Thats correct!! your total points are now {correct_answers}")
+          print(f"Thats correct!!")
           print("")
+        print(f"Your total points are now {correct_answers} our of {current_question}")
         current_question += 1
   print("")
   load_score( correct_answers, total_questions, name )
@@ -245,7 +249,7 @@ def load_score( user_score, total_score, quiz_name ):
   if user_score == 0:
     percentage = 0
   else:
-    percentage = ( total_score / user_score) * 100
+    percentage = ( user_score / total_score ) * 100
 
   message = ''
 

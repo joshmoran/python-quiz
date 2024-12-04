@@ -1,30 +1,46 @@
 {
     "name": "Body Parts",
-    "description": "Here be monsters",
+    "description": "A quiz about the human body",
     "questions": {
-        "Name the head": {
-            "A": "Option 1",
-            "B": "Option 2",
-            "C": "Option 3",
-            "D": "Option 4",
+        "How many bones are their in the body?": {
+            "A": "200",
+            "B": "206",
+            "C": "184",
+            "D": "217",
             "S": "Skip",
             "answer": "B"
         },
-        "What is the bodys torso": {
-            "A": "Option 1",
-            "B": "Option 2",
-            "C": "Option 3",
-            "D": "Option 4",
+        "What is the largest organ?": {
+            "A": "Brain",
+            "B": "Lungs",
+            "C": "Liver",
+            "D": "Skin",
+            "S": "Skip",
+            "answer": "D"
+        },
+        "What body parts allow you to smell?": {
+            "A": "Eyes",
+            "B": "Hands",
+            "C": "Ears",
+            "D": "Nose",
+            "S": "Skip",
+            "answer": "D"
+        },
+        "What part of the digestive system allow the body to absorb nutrients?": {
+            "A": "Large Intestines",
+            "B": "Small Intestines",
+            "C": "Mouth",
+            "D": "Stomach",
             "S": "Skip",
             "answer": "B"
         },
-        "What are legs ": {
-            "A": "Option 1",
-            "B": "Option 2",
-            "C": "Option 3",
-            "D": "Option 4",
+        "What percentage of the body is water": {
+            "A": "66%",
+            "B": "60%",
+            "C": "76%",
+            "D": "80%",
             "S": "Skip",
-            "answer": "B"
+            "answer": "A"
         }
     }
 }

@@ -1,0 +1,46 @@
+{
+    "name": "General Knowledge",
+    "description": "A quiz around general knowledge",
+    "questions": {
+        "Who invented the World Wide Web(WWW)?": {
+            "A": "Diana Ross",
+            "B": "Madonna",
+            "C": "Tim Berners-Lee",
+            "D": "Michael Jackson",
+            "S": "Skip",
+            "answer": "C"
+        },
+        "What year did World War 2 (WW2) start?": {
+            "A": "1940",
+            "B": "1937",
+            "C": "1938",
+            "D": "1939",
+            "S": "Skip",
+            "answer": "D"
+        },
+        "What is frozen water called?": {
+            "A": "Ice",
+            "B": "Air",
+            "C": "Cold",
+            "D": "Stone",
+            "S": "Skip",
+            "answer": "A"
+        },
+        "Who painted the Sistine Chapel?": {
+            "A": "Michelangelo",
+            "B": "Isaac Newton",
+            "C": "Leonardo da Vinci",
+            "D": "Donatello",
+            "S": "Skip",
+            "answer": "A"
+        },
+        "How many minutes are in a week?": {
+            "A": "10040",
+            "B": "10002",
+            "C": "10040",
+            "D": "10080",
+            "S": "Skip",
+            "answer": "D"
+        }
+    }
+}

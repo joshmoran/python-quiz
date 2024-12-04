@@ -1,28 +1,44 @@
 {
-    "name": "UK Capitals",
-    "description": "Here be monsters",
+    "name": "World Capitals",
+    "description": "A quiz about the capital cities",
     "questions": {
-        "City of the uk": {
-            "A": "Option 1",
-            "B": "Option 2",
-            "C": "Option 3",
-            "D": "Option 4",
+        "What is the capital of the United Kingdom": {
+            "A": "London",
+            "B": "Bangkok",
+            "C": "Paris",
+            "D": "Rome",
             "S": "Skip",
-            "answer": "B"
+            "answer": "A"
         },
-        "City of luxemburg": {
-            "A": "Option 1",
-            "B": "Option 2",
-            "C": "Option 3",
-            "D": "Option 4",
+        "What is the capital of France?": {
+            "A": "Stockholm",
+            "B": "Vienna",
+            "C": "Paris",
+            "D": "Madrid",
             "S": "Skip",
-            "answer": "B"
+            "answer": "C"
         },
-        "City of france": {
-            "A": "Option 1",
-            "B": "Option 2",
-            "C": "Option 3",
-            "D": "Option 4",
+        "What is the capital of Austria": {
+            "A": "Vienna",
+            "B": "Rome",
+            "C": "London",
+            "D": "Berlin",
+            "S": "Skip",
+            "answer": "A"
+        },
+        "What is the capital of Germany": {
+            "A": "Berlin",
+            "B": "Vienna",
+            "C": "London",
+            "D": "Stockholm",
+            "S": "Skip",
+            "answer": "A"
+        },
+        "What is the capital of Spain": {
+            "A": "Vienna",
+            "B": "Madrid",
+            "C": "Bangkok",
+            "D": "Stockholm",
             "S": "Skip",
             "answer": "B"
         }
