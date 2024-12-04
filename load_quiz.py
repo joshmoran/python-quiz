@@ -1,6 +1,7 @@
 # Import Modules
 import glob
 import json
+import math
 
 # User Variables 
 quiz_dir = 'quizzes/'
@@ -233,8 +234,6 @@ def create_quiz ( data, name ):
         current_question += 1
   print("")
   load_score( correct_answers, total_questions, name )
-
-import math
 
 def load_score( user_score, total_score, quiz_name ):
   # How to view scores
