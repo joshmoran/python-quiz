@@ -5,7 +5,7 @@
 1. Overview and Error Handling
 2. Adding new quizzes
 
-# 1. OVerview and Features
+# 1. Overview and Features
 
 ## Initial Start 
 ### Overview 
@@ -18,6 +18,7 @@
 - If an empty string is entered, an error is returned and the user is re-asked their name 
 
 ## Rules
+### Overview
 - Show the user how to play the game
 - Breaks down into two sections
     1. Selecting a quiz
@@ -38,15 +39,20 @@
   - E.g. their are 3 quizzes available and the user enters '4', this would return an error and re-asks the user to re-enter their selector 
 
 ## Create Quiz
+### Overview 
 - The quiz name is shown 
 - The quiz description is how 
 - Questions are read from the JSON file and are returned one-by-one once the user has selected a valid input (A,B,C,D or S)
-  - If the user does not enter a valid input, the user is re-asked to enter a valid input
+  -
   - Within the JSON, each question will have a key called 'answer' which indicates to the Python script which question option is correct.
     - THE QUESTION OPTION SELECTORS NEEDS TO BE A CAPITAL!!!
 - At the end of the quiz
   - The users score is shown and a dynamic message is shown based on their score
   - The users score is saved into an array and can be shown when they are in the main menu (selecting a quiz)
+
+### Error Handling 
+- If the user does not enter a valid input, the user is re-asked to enter a valid input
+- Until a valid input is entered, the question will not move on to the next questionUpdates to README
 
 # 2. Adding new quizzes
 - File in the root directory called, 'template.json'
