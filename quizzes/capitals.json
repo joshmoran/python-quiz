@@ -1,0 +1,30 @@
+{
+    "name": "UK Capitals",
+    "description": "Here be monsters",
+    "questions": {
+        "City of the uk": {
+            "A": "Option 1",
+            "B": "Option 2",
+            "C": "Option 3",
+            "D": "Option 4",
+            "S": "Skip",
+            "answer": "B"
+        },
+        "City of luxemburg": {
+            "A": "Option 1",
+            "B": "Option 2",
+            "C": "Option 3",
+            "D": "Option 4",
+            "S": "Skip",
+            "answer": "B"
+        },
+        "City of france": {
+            "A": "Option 1",
+            "B": "Option 2",
+            "C": "Option 3",
+            "D": "Option 4",
+            "S": "Skip",
+            "answer": "B"
+        }
+    }
+}
