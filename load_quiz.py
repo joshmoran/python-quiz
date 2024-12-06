@@ -16,6 +16,8 @@ available_quizzes = []
 
 quiz_files = glob.glob( quiz_dir + '*.json')
 
+print( quiz_files )
+
 # Initial Initialization 
 def initialise():
   global user_name
